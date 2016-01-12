@@ -58,11 +58,12 @@ function newsfeed($uid){
 	function like($pid,$uid,$uname){
 	require_once 'dbconfig.php';
 	$sql = "insert into like(uid,uname,pid)values($uid,$uname,$pid)";
-	$result = $conn->query($sql);
+	$result = $conn->query($sql
+		);
 }
 
 
-	function like($pid){
+	function displike($pid){
 	require_once 'dbconfig.php';
 	$sql = "select * from like where pid = $pid";
 	$result = $conn->query($sql);
